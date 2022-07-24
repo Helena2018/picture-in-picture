@@ -1,8 +1,6 @@
 const videoElement = document.getElementById('video');
 const button = document.getElementById('button');
 
-button.addEventListener('click', selectMediaStream)
-
 // Prompt to select media stream, pass to video element, then play
 async function selectMediaStream() {
   try {
@@ -16,6 +14,13 @@ async function selectMediaStream() {
     console.log('whoooops, error here: ', error);
   }
 }
+
+// Event Listener
+button.addEventListener('click', async () => {
+  // Disable button
+  button.disabled = true;
+  
+});
 
 // On Load 
 selectMediaStream();
